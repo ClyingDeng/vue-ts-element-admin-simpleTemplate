@@ -1,6 +1,6 @@
 import { Component, Vue } from 'vue-property-decorator';
 @Component({
-  name: 'jqmsg'
+  name: 'twomenu1'
 })
 export default class extends Vue {
   private data: object[] = [];

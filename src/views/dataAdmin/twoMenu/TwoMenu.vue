@@ -1,7 +1,12 @@
+<template>
+  <router-view></router-view>
+</template>
+<script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 @Component({
-  name: 'power'
+  name: 'twomenu',
 })
 export default class extends Vue {
   private data: object[] = [];
 }
+</script>

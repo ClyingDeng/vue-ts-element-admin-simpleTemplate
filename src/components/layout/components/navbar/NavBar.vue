@@ -10,7 +10,7 @@
           <i class="el-icon-caret-bottom" />
         </div>
         <el-dropdown-menu slot="dropdown">
-          <a target="_blank" href="https://">
+          <a target="_blank" href="https://github.com/ClyingDeng/vue-ts-element-admin-simpleTemplate">
             <el-dropdown-item> GitHub </el-dropdown-item>
           </a>
           <el-dropdown-item divided @click.native="logout">
