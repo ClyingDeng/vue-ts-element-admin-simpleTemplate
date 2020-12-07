@@ -20,8 +20,8 @@ module.exports = {
         }).end();
     })
   },
-  publicPath: '/' + process.env.APP_NAME,
-  outputDir: "dist/admin",
+  publicPath: '/',
+  outputDir: "dist",
   assetsDir: 'static',
   devServer: {
     port: 8085,
