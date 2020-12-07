@@ -1,17 +1,6 @@
-// vue.config.js
-// const webpack = require('webpack');
 const path = require('path');
 module.exports = {
   transpileDependencies: ['vue-class-component'],
-  // pluginOptions: {
-  //   'style-resources-loader': {
-  //     preProcessor: 'scss',
-      // patterns: [
-      //   path.resolve(__dirname, 'src/styles/_variables.scss'),
-      //   path.resolve(__dirname, 'src/styles/_mixins.scss')
-      // ]
-  //   }
-  // },
   chainWebpack: config => {
     config
       .entry('index')
@@ -25,13 +14,14 @@ module.exports = {
         .options({
           resources: [
             path.resolve(__dirname, 'src/styles/_variables.scss'),
-            path.resolve(__dirname, 'src/styles/_mixins.scss')
+            path.resolve(__dirname, 'src/styles/_mixins.scss'),
+            path.resolve(__dirname, 'src/styles/icon.scss'),
           ]
         }).end();
     })
   },
-  publicPath: '/admin',
-  outputDir: "dist",
+  publicPath: '/' + process.env.APP_NAME,
+  outputDir: "dist/admin",
   assetsDir: 'static',
   devServer: {
     port: 8085,

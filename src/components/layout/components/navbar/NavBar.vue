@@ -11,7 +11,7 @@
         </div>
         <el-dropdown-menu slot="dropdown">
           <a target="_blank" href="https://github.com/ClyingDeng/vue-ts-element-admin-simpleTemplate">
-            <el-dropdown-item> GitHub </el-dropdown-item>
+            <el-dropdown-item> 外链 </el-dropdown-item>
           </a>
           <el-dropdown-item divided @click.native="logout">
             <span style="display: block"> 退出登录 </span>
