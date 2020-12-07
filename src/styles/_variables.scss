@@ -32,3 +32,41 @@ $loginCursorColor: #fff;
   menuText: $menuText;
   menuActiveText: $menuActiveText;
 }
+%displayCenter {
+  display        : flex;
+  justify-content: center;
+  align-items    : center;
+}
+
+%displayAround {
+  display        : flex;
+  justify-content: space-around;
+  align-items    : center;
+}
+
+%displayBetween {
+  display        : flex;
+  justify-content: space-between;
+  align-items    : center;
+}
+
+%displayColumnCenter {
+  display        : flex;
+  flex-direction : column;
+  justify-content: center;
+  align-items    : center;
+}
+
+%displayColumnAround {
+  display        : flex;
+  flex-direction : column;
+  justify-content: space-around;
+  align-items    : center;
+}
+
+%absoluteCenter {
+  position : absolute;
+  top      : 50%;
+  left     : 50%;
+  transform: translate(-50%, -50%);
+}

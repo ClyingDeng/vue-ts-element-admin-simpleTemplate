@@ -17,19 +17,24 @@
           :index="resolvePath(theOnlyOneChild.path)"
           :class="{ 'submenu-title-noDropdown': isFirstLevel }"
         >
-          <svg-icon
+          <div
+            v-if="theOnlyOneChild.meta.icon"
+            :class="theOnlyOneChild.meta.icon"
+          ></div>
+          <!-- <svg-icon
             v-if="theOnlyOneChild.meta.icon"
             :name="theOnlyOneChild.meta.icon"
-          />
+          /> -->
           <span v-if="theOnlyOneChild.meta.title" slot="title">{{
-           theOnlyOneChild.meta.title
+            theOnlyOneChild.meta.title
           }}</span>
         </el-menu-item>
       </sidebar-item-link>
     </template>
     <el-submenu v-else :index="resolvePath(item.path)" popper-append-to-body>
       <template slot="title">
-        <svg-icon v-if="item.meta && item.meta.icon" :name="item.meta.icon" />
+        <!-- <svg-icon v-if="item.meta && item.meta.icon" :name="item.meta.icon" /> -->
+        <div v-if="item.meta && item.meta.icon" :class="item.meta.icon"></div>
         <span v-if="item.meta && item.meta.title" slot="title">{{
           item.meta.title
         }}</span>

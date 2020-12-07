@@ -3,69 +3,58 @@ import Layout from '@/components/layout/index.vue';
 export const nestedRoutes: RouteConfig = {
   path: '/data',
   component: Layout,
-  redirect: '/data/onemenu',
+  redirect: '/data/power',
   name: 'data',
   meta: {
-    icon: 'component',
-    title: '多级管理'
+    icon: 'el-icon-menu',
+    title: '数据管理'
   },
   children: [
+    // {
+    //   path: '/data/power/:area',
+    //   component: () => import('@/views/dataAdmin/power/Power.vue'),
+    //   meta: { hidden: true }
+    // },
     {
-      path: 'onemenu',
-      name: 'onemenu',
-      component: () => import('@/views/dataAdmin/oneMenu/OneMenu.vue'),
+      path: 'power',
+      name: 'power',
+      component: () => import('@/views/dataAdmin/power/Power.vue'),
       meta: {
-        title: '子菜单1'
+        title: '力量数据'
       }
     },
     {
-      path: 'twomenu',
-      name: 'twomenu',
-      component: () => import('@/views/dataAdmin/twoMenu/TwoMenu.vue'),
+      path: 'sjData',
+      name: 'sjData',
+      component: () => import('@/views/dataAdmin/sjData/SjData.vue'),
       meta: {
-        title: '子菜单2'
+        title: '事件数据'
       },
       children: [
         {
-          path: 'twomenu1',
-          name: 'twomenu1',
-          component: () => import('@/views/dataAdmin/twoMenu/twoMenu1/TwoMenu1.vue'),
+          path: 'sjmsg',
+          name: 'sjmsg',
+          component: () => import('@/views/dataAdmin/sjData/sjMsg/SjMsg.vue'),
           meta: {
-            title: '子子菜单2-1'
+            title: '事件信息'
           }
         },
         {
-          path: 'twomenu2',
-          name: 'twomenu2',
-          component: () => import('@/views/dataAdmin/twoMenu/twoMenu2/TwoMenu2.vue'),
+          path: 'feedback',
+          name: 'feedback',
+          component: () => import('@/views/dataAdmin/sjData/feedBack/FeedBack.vue'),
           meta: {
-            title: '子子菜单2-2',
-          }
-        },
-        {
-          path: 'twomenu3',
-          name: 'twomenu3',
-          component: () => import('@/views/dataAdmin/twoMenu/twoMenu3/TwoMenu3.vue'),
-          meta: {
-            title: '子子菜单2-3',
+            title: '事件反馈'
           }
         }
       ]
     },
     {
-      path: 'threemenu',
-      name: 'threemenu',
-      component: () => import('@/views/dataAdmin/threeMenu/ThreeMenu.vue'),
+      path: 'weather',
+      name: 'weather',
+      component: () => import('@/views/dataAdmin/area/Area.vue'),
       meta: {
-        title: '子菜单3'
-      }
-    },
-    {
-      path: 'fourmenu',
-      name: 'fourmenu',
-      component: () => import('@/views/dataAdmin/fourMenu/FourMenu.vue'),
-      meta: {
-        title: '子菜单4'
+        title: '地方天气'
       }
     }
   ]
