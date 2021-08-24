@@ -20,7 +20,7 @@ module.exports = {
         }).end();
     })
   },
-  publicPath: '/vue-ts-element-admin-simpleTemplate',
+  publicPath: '/support',
   outputDir: "dist",
   assetsDir: 'static',
   devServer: {

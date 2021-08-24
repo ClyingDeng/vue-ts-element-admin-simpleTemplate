@@ -1,0 +1,67 @@
+%chooseState {
+    @include MbgImg('../../assets/login/', 'popedom_sum_bg.png');
+    background-size: cover;
+}
+
+.login {
+    @include Mwh(100vw, 100vh);
+    background: #000129;
+    @extend %displayCenter;
+    font-size: 0.9vw;
+    color    : #f1f1f1;
+
+    .center {
+        @include Mwh(28vw, 33vh);
+        min-height: 240px;
+        @include MbgImg('../../assets/login/', 'loginBg.png');
+        padding: 2vh;
+
+
+
+        .main {
+            margin-top: 2vh;
+            @include Mwh(100%, 21vh);
+            min-height: 180px;
+
+            .loginInput {
+                @include Mwh(90%, 21vh);
+                min-height: 160px;
+            }
+
+            .loginButton {
+                @include Mwh(60%, 6vh);
+                @extend %displayCenter;
+                font-size    : 1.2vw;
+                border       : 0.2vh solid #2d76ff;
+                border-radius: 0.4vw;
+                cursor       : pointer;
+                @extend %chooseState;
+            }
+
+            .loginButton:hover {
+                @include Mwh(70%, 6vh);
+            }
+        }
+
+    }
+
+    .footer {
+        width          : 50vw;
+        position       : absolute;
+        bottom         : 2vh;
+        display        : flex;
+        justify-content: space-around;
+
+        .down {
+            a {
+                color    : #f1f1f1;
+                cursor   : pointer;
+                font-size: 1vw;
+            }
+
+            a:hover {
+                color: #2d76ff;
+            }
+        }
+    }
+}
