@@ -6,7 +6,7 @@ export default class Config {
 
   static get RequestInfoUrl() {
     return this.isDevelopment
-    ? process.env.VUE_APP_BASE_API
-    : process.env.VUE_APP_BASE_API;
+      ? (<any> window).VUE_APP_DEV_BASE_API
+      : (<any> window).VUE_APP_BUILD_BASE_API;
   }
 }
