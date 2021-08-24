@@ -8,7 +8,7 @@ Check out My site at https://clyingdeng.github.io/vue-ts-element-admin-simpleTem
 
 ## Project setup
 ```
-yarn install
+yarn
 ```
 
 ### Compiles and hot-reloads for development
